@@ -1,0 +1,111 @@
+:root {
+  --palace-red: #8f1c23;
+  --vermillion: #bf372f;
+  --glazed-gold: #cda861;
+  --glazed-gold-soft: #e3c98f;
+  --ink: #2a1a16;
+  --paper: #fbf6eb;
+  --paper-deep: #f1e4ce;
+  --line: rgba(88, 49, 36, 0.18);
+  --panel-bg: linear-gradient(180deg, rgba(255, 251, 243, 0.96), rgba(246, 232, 201, 0.94));
+  --panel-shadow: 0 24px 60px rgba(72, 31, 20, 0.18);
+  --surface-card: linear-gradient(170deg, rgba(253, 245, 229, 0.98), rgba(244, 228, 199, 0.92));
+  --text-soft: rgba(60, 34, 26, 0.84);
+  --hero-mask: linear-gradient(115deg, rgba(143, 28, 35, 0.84), rgba(143, 28, 35, 0.36));
+  --hero-overlay: linear-gradient(0deg, rgba(18, 9, 7, 0.54), transparent 48%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  line-height: 1.75;
+  background:
+    radial-gradient(circle at 12% 8%, rgba(207, 171, 99, 0.18), transparent 35%),
+    radial-gradient(circle at 82% 14%, rgba(159, 29, 34, 0.14), transparent 40%),
+    repeating-linear-gradient(
+      -35deg,
+      rgba(100, 60, 45, 0.04) 0,
+      rgba(100, 60, 45, 0.04) 2px,
+      transparent 2px,
+      transparent 10px
+    ),
+    linear-gradient(180deg, var(--paper) 0%, #f4e8cf 58%, var(--paper-deep) 100%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(255, 231, 186, 0.92);
+  outline-offset: 3px;
+}
+
+.site-page {
+  min-height: 100vh;
+}
+
+.site-main,
+.page-shell {
+  width: min(1120px, 92vw);
+  margin: 2.5rem auto 4rem;
+}
+
+.site-title,
+.page-title {
+  margin: 0;
+  font-family: "STKaiti", "KaiTi", "Kaiti SC", "FangSong", serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+
+.site-title {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+}
+
+.page-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.eyebrow,
+.page-kicker {
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.subtitle,
+.page-summary {
+  margin: 1.2rem auto 0;
+  max-width: 62ch;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+}
+
+@media (max-width: 800px) {
+  .site-main,
+  .page-shell {
+    width: min(1120px, 94vw);
+  }
+}
